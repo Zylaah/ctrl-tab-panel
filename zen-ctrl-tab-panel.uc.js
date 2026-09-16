@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        Ctrl Tab Panel
+// @name        ctrl-tab-panel
 // @description Runtime finish for Zen Browser PR #12397.
 // @include     main
 // ==/UserScript==

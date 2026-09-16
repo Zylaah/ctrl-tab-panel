@@ -13,7 +13,7 @@
       "chrome": "chrome.css"
     },
     "scripts": {
-      "zen-ctrl-tab-panel.uc.mjs": {
+      "zen-ctrl-tab-panel.uc.js": {
         "include": ["chrome://browser/content/browser.xhtml"]
       }
     },
