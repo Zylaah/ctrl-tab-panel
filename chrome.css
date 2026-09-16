@@ -1,0 +1,112 @@
+/* Runtime CSS for zen-browser/desktop PR #12397. */
+
+:root {
+  --zen-ctrl-tab-panel-padding: 16px;
+  --zen-ctrl-tab-panel-card-inner-padding: 12px;
+  --zen-ctrl-tab-panel-card-gap: 12px;
+  --zen-ctrl-tab-panel-card-width: 250px;
+  --zen-ctrl-tab-panel-card-height: 220px;
+  --zen-ctrl-tab-panel-card-border-radius: 14px;
+  --zen-ctrl-tab-panel-thumbnail-border-radius: 8px;
+  --zen-ctrl-tab-panel-thumbnail-height: 156px;
+  --zen-ctrl-tab-panel-info-height: 28px;
+  --zen-ctrl-tab-panel-selected-bg: var(
+    --arrowpanel-dimmed,
+    color-mix(in srgb, currentColor 9%, transparent)
+  );
+}
+
+#zen-ctrl-tab-panel {
+  --panel-padding: var(--zen-ctrl-tab-panel-padding);
+  width: fit-content;
+  height: fit-content;
+}
+
+#zen-ctrl-tab-panel .panel-viewcontainer,
+#zen-ctrl-tab-panel .panel-viewstack {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#zen-ctrl-tab-panel-cards {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  height: var(--zen-ctrl-tab-panel-card-height);
+}
+
+.zen-ctrl-tab-panel-card {
+  flex-shrink: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: var(--zen-ctrl-tab-panel-card-gap);
+  width: var(--zen-ctrl-tab-panel-card-width);
+  height: var(--zen-ctrl-tab-panel-card-height);
+  padding: var(--zen-ctrl-tab-panel-card-inner-padding);
+  border: 1px solid transparent;
+  border-radius: var(--zen-ctrl-tab-panel-card-border-radius);
+}
+
+.zen-ctrl-tab-panel-card:not(.zen-ctrl-tab-panel-selected):hover {
+  background: color-mix(in srgb, currentColor 5%, transparent);
+}
+
+.zen-ctrl-tab-panel-card.zen-ctrl-tab-panel-selected {
+  background: var(--zen-ctrl-tab-panel-selected-bg);
+  border-color: color-mix(in srgb, currentColor 14%, transparent);
+}
+
+.zen-ctrl-tab-panel-thumbnail {
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--zen-ctrl-tab-panel-thumbnail-height);
+  border-radius: var(--zen-ctrl-tab-panel-thumbnail-border-radius);
+}
+
+.zen-ctrl-tab-panel-no-thumbnail .zen-ctrl-tab-panel-thumbnail {
+  outline: 1px solid var(--panel-separator-color);
+  outline-offset: -1px;
+}
+
+.zen-ctrl-tab-panel-thumbnail img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.zen-ctrl-tab-panel-info {
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: var(--zen-ctrl-tab-panel-info-height);
+  color: var(--zen-branding-bg-reverse);
+  -moz-text-fill-color: var(--zen-branding-bg-reverse);
+}
+
+.zen-ctrl-tab-panel-favicon {
+  width: 20px;
+  height: 20px;
+  -moz-context-properties: fill;
+  fill: currentColor;
+}
+
+.zen-ctrl-tab-panel-title {
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

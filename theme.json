@@ -1,0 +1,23 @@
+{
+    "id": "ctrl-tab-panel",
+    "homepage": "https://github.com/Zylaah/ctrl-tab-panel",
+    "name": "Ctrl Tab Panel",
+    "description": "Arc styled ctrl tab panel.",
+    "author": "Zylaah",
+    "version": "1.0.0",
+    "updatedAt": "2026-09-16",
+    "tags": ["ctrl", "tab", "panel"],
+    "fork": ["zen"],
+    "preferences": "preferences.json",
+    "style": {
+      "chrome": "chrome.css"
+    },
+    "scripts": {
+      "zen-ctrl-tab-panel.uc.mjs": {
+        "include": ["chrome://browser/content/browser.xhtml"]
+      }
+    },
+    "readme": "https://raw.githubusercontent.com/Zylaah/ctrl-tab-panel/main/README.md",
+    "createdAt": "2026-09-16"
+  }
+  

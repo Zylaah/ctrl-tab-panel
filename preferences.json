@@ -1,0 +1,27 @@
+[
+  {
+    "type": "text",
+    "label": "Ctrl Tab Panel",
+    "margin": "20px 0 8px 0",
+    "size": "20px"
+  },
+  {
+    "type": "text",
+    "label": "Preview tabs while holding Ctrl+Tab. Release Ctrl to switch, or press Esc to cancel.",
+    "margin": "0 0 18px 0"
+  },
+  {
+    "type": "checkbox",
+    "property": "zen.tabs.ctrl-tab-panel.enabled",
+    "label": "Show tab preview panel for Ctrl+Tab",
+    "defaultValue": true,
+    "margin": "12px 0"
+  },
+  {
+    "type": "checkbox",
+    "property": "zen.tabs.ctrl-tab-panel.sort-by-recent",
+    "label": "Order tabs by recent use",
+    "defaultValue": false,
+    "margin": "12px 0"
+  }
+]
